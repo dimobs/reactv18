@@ -17,7 +17,8 @@ function App() {
       setName('Pesho');
       setInfo(oldState => ({
         ...oldState,
-        hobbies: [...oldState.hobbies, 'fourth']
+        //използват се само немутиращи 
+        hobbies: [...oldState.hobbies, 'fourth'],
         age: 42,
       }))
     }, 2000);
