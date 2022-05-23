@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
+import Counter from './Count'
 import './App.css';
 
 function App() {
   const [name, setName] = useState('');
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(5);
   const [info, setInfo] = useState({
     name: 'Dimo',
     age: 41,
@@ -16,6 +17,7 @@ function App() {
       setName('Pesho');
       setInfo(oldState => ({
         ...oldState,
+        hobbies: [...oldState.hobbies, 'fourth']
         age: 42,
       }))
     }, 2000);
@@ -25,7 +27,10 @@ function App() {
     <div className="App">
       <h2>Name: {!name ? 'Loading...' : name}</h2>
       <h3>{info.age}  {info.name}   {info.hobbies[1]}</h3>
-      <h3>{count}</h3>
+     {count < 10
+      ? <Counter value={count } />
+    : null  
+    }
       <button onClick={() => setCount(x => x + 1)}>increase</button>
     </div>
   );
