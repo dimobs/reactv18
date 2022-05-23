@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react'
 import './App.css';
 
 function App() {
+  const [name, setName] = useState('');
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setName('Pesho')
+    }, 2000);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Name: {!name ? 'Loading...' : name}</h2>
+      <h3>{count}</h3>
+      <button onClick={() => setCount(x => x + 1)}>increase</button>
     </div>
   );
 }
