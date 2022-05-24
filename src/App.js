@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
-import Counter from './Count'
 import './App.css';
+import Counter from './components/Count'
+import CharacterList from './components/CharacterList';
+
 
 function App() {
   const [name, setName] = useState('');
@@ -33,6 +35,7 @@ function App() {
     : null  
     }
       <button onClick={() => setCount(x => x + 1)}>increase</button>
+    <CharacterList />
     </div>
   );
 }
