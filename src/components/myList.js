@@ -1,19 +1,20 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from "react";
+
+// const myList = () => {
+
+
+//     return (
+//         <h1>dooogs</h1>
+//     )
+// }
+
+// export default myList;
+
 
 const myList = () => {
-    const [dogs, setDogs] = useState([]);
-
-    useEffect(() => {
-        fetch('https://dog.ceo/api/breads/image/random/3')
-            .then(res => res.json())
-            .then(res => {
-                setDogs(res.message)
-    });
-    }, []);
-
 
     return (
-        <h1>dooogs</h1>
+        <h2>Welcome Home</h2>
     )
 }
 

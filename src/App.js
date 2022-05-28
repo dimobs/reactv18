@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/myList" element={<myList />} />
+          <Route path="/my-list" element={<myList />} />
         </Routes>
       </div>
       </AuthProvider>
