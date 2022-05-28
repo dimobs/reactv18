@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import NavBar from "./NavBar"
-import Home from "./components/myList";
+import Home from "./components/Home";
 import Login from './components/Login'
 import {AuthProvider} from './contexs/AuthContex'
 import 'bootstrap/dist/css/bootstrap.min.css';
