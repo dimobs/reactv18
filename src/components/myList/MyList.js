@@ -11,11 +11,11 @@
 // export default myList;
 
 
-const myList = () => {
+const MyList = () => {
 
     return (
-        <h2>Welcome Home</h2>
+        <h2>Welcome my list</h2>
     )
 }
 
-export default myList;
+export default MyList;
