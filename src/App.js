@@ -1,43 +1,28 @@
-import { useState, useEffect } from 'react'
-import './App.css';
-import Counter from './components/Count'
-import CharacterList from './components/CharacterList';
-
+import { Route, Routes } from "react-router-dom"
+import NavBar from "./NavBar"
+import Home from "./components/Home";
+import Login from './components/Login'
+import {AuthProvider} from './contexs/AuthContex'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import myList from './components/myList'
 
 function App() {
-  const [name, setName] = useState('');
-  const [count, setCount] = useState(5);
-  const [info, setInfo] = useState({
-    name: 'Dimo',
-    age: 41,
-    hobbies: ['first', 'secound', 'third']
-  });
-
-  //ComponentDidMount
-  useEffect(() => {
-    setTimeout(() => {
-      setName('Pesho');
-      setInfo(oldState => ({
-        ...oldState,
-        //използват се само немутиращи 
-        hobbies: [...oldState.hobbies, 'fourth'],
-        age: 42,
-      }))
-    }, 2000);
-  }, []);
-
   return (
-    <div className="App">
-      <h2>Name: {!name ? 'Loading...' : name}</h2>
-      <h3>{info.age}  {info.name}   {info.hobbies[1]}</h3>
-     {count < 10
-      ? <Counter value={count } />
-    : null  
-    }
-      <button onClick={() => setCount(x => x + 1)}>increase</button>
-    <CharacterList />
-    </div>
-  );
+    <>
+    <AuthProvider>
+      <Header />
+    <NavBar />
+         <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/myList" element={<myList />} />
+        </Routes>
+      </div>
+      </AuthProvider>
+    </>
+  )
 }
 
-export default App;
+export default App

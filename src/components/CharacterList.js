@@ -1,13 +1,19 @@
 import useFetch from "../hooks/useFetch";
+// import { useContext } from "react";
+// import AuthContex from '../contexs/AuthContex';
 
 
 const CharacterList = () => {
-    const { state: characters, isLoading, error } = useFetch('https://swapi.dev/api/people')
+    // const count = useContext(AuthContex);
+    const { state: characters } = useFetch('https://swapi.dev/api/people')
 
     return (
+        <>
         <ul>
             {characters.map(x => <li key={x.name}>{x.name}</li>)}
         </ul>
+        {/* <h3>{count}</h3> */}
+        </>
     );
 };
 

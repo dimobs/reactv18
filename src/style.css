@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 50;
+}
+
+.nav {
+    background-color: 333;
+    color: white;
+    display: flex;
+}
