@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import { useAuth } from '../../contexs/AuthContex';
-import { Navigate } from 'react-router-dom';
+import {isAuth} from '../../hoc/IsAuth';
 
 const MyList = () => {
-    const {user} = useAuth();
     const [dogs, setDogs] = useState([]);
 
     useEffect(() => {
@@ -14,10 +12,6 @@ const MyList = () => {
             });
     }, []);
 
-    if (!user.email) {
-        return <Navigate to='/login' />
-    }
-
     return (
         <>
             {dogs.map(x => (<img className="d-block w-5" src={x} alt="Third slide" />))}
@@ -25,6 +19,8 @@ const MyList = () => {
     )
 }
 
-export default MyList;
+const EnhancedComponent = isAuth(MyList)
+
+export default EnhancedComponent;
 
 
