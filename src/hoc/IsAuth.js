@@ -6,7 +6,9 @@ export const isAuth = (Component) => { //вътрешен компонент
     const WrapperComponent = (props) => { //външен компонент
         const { isAuthenticated } = useAuth();
 
-        return isAuthenticated ? <Component {...props} /> : <Navigate to='/login' />
+        return isAuthenticated 
+        ? <Component {...props} /> 
+        : <Navigate to='/login' />
     }
     return WrapperComponent;
 }
