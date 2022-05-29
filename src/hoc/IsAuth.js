@@ -1,17 +1,12 @@
 import { useAuth } from "../contexs/AuthContex"; 
-import {useNavigate} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 
 export const isAuth = (Component) => { //вътрешен компонент
 
     const WrapperComponent = (props) => { //външен компонент
-        const navigate = useNavigate();
-const {isAuthenticated} = useAuth();
+     const {isAuthenticated} = useAuth();
 
-if(!isAuthenticated){
-navigate('/login')
-return null;
-}
-        return <Component {...props} />;
+        return isAuthenticated ? <Component {...props} />: <Navigate to='/login' />
     }
     return WrapperComponent;
 }
