@@ -6,6 +6,7 @@ import {AuthProvider} from './contexs/AuthContex'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import MyList from './components/myList';
+import DeferredView from './components/Deferred'
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
          <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/deferred" element={<DeferredView />} />
+
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />
         </Routes>
