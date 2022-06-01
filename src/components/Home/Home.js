@@ -4,8 +4,18 @@ const Home = () => {
 
     return (
         <>
-        <h2>Welcome Home</h2>
+        <h2>Welcome Home Page</h2>
+        <ul>
+            <li>
         <Link to="/deferred" className="site-title">Deferred</Link>
+            </li>
+            <li>
+        <Link to="/messenger" className="site-title">Chat</Link>
+            </li>
+<li>
+<Link to="/login" className="site-title">go to Login</Link>
+ </li>            
+        </ul>
         </>
     )
 }
