@@ -12,8 +12,7 @@ const Login = () => {
         let formData = new FormData(e.currentTarget);
         let email = formData.get('email')
         let password = formData.get('password')
-        console.log(email, password);
-
+      
         login(email, password)
         navigate('/');
 
