@@ -1,16 +1,14 @@
-import React, {useState} from 'react';
 import Login from './Login';
+import useLocaleStorage from '../../hooks/useLocaleStorage';
+import Dashboard from './Dashboard';
 
 const LayOut = () => {
-    const [id, setId] = useState();
+    const [id, setId] = useLocaleStorage('id');
 
 
-    return(
-        <>
-        <p>Chat messenger</p>
-        {id}
-       <Login onIdSubmit={setId} />
-        </>
+    return (
+    id ? <Dashboard id={id} /> :  <Login onIdSubmit={setId} />
+  
     )
 
 }
