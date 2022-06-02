@@ -3,7 +3,7 @@ import {Tab, Nav, Button, Modal}from 'react-bootstrap';
 import Conversations from './Conversation';
 import Contacts from './Contacts';
 import NewConversationModel from './NewConversationModel';
-import NewContactModel from './NewContactModel';
+import NewContactModel from '../client/NewContactModal';
 
 const CONVERSATIONS_KEY = 'conversations'
 const CONTACTS_KEY = 'constacts'
@@ -39,10 +39,10 @@ function closeModal() {
     </Tab.Content>
     <div className="p-2 border-top border-right small">
         Your Id: <span className="text-muted">{id}</span>
+    </div>
         <Button onClick={() => setModalOpen(true) } className="rounded-0">
 New {conversationOpen ? 'Conversation' : 'contact'}
         </Button>
-    </div>
 </Tab.Container>
 <Modal show={modalOpen} onHide={closeModal}>
     {conversationOpen
