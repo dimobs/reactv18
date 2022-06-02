@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Tab, Nav, Button, Modal}from 'react-bootstrap';
 import Conversations from './Conversation';
 import Contacts from './Contacts';
-import NewConversationModel from './NewConversationModel';
+import NewConversationModal from './NewConversationModal';
 import NewContactModel from '../client/NewContactModal';
 
 const CONVERSATIONS_KEY = 'conversations'
@@ -46,7 +46,7 @@ New {conversationOpen ? 'Conversation' : 'contact'}
 </Tab.Container>
 <Modal show={modalOpen} onHide={closeModal}>
     {conversationOpen
-    ? <NewConversationModel closeModal={closeModal } />
+    ? <NewConversationModal closeModal={closeModal } />
     : <NewContactModel closeModal={closeModal } />
     }
 </Modal>
