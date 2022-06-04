@@ -12,6 +12,9 @@ const Home = () => {
             <li>
         <Link to="/messenger" className="site-title">Chat</Link>
             </li>
+            <li>
+        <Link to="/countTwo" className="site-title">Count</Link>
+            </li>
 <li>
 <Link to="/login" className="site-title">go to Login</Link>
  </li>            

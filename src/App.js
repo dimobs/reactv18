@@ -7,6 +7,7 @@ import Header from './components/Header';
 import MyList from './components/myList';
 import DeferredView from './components/Deferred'
 import Messenger from './components/ChatMessaging/client'
+import CountTwo from "./components/Deferred/CountTwo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/deferred" element={<DeferredView />} />
           <Route path="/messenger" element={<Messenger />} />
+          <Route path="/countTwo" element={<CountTwo />} />
 
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />

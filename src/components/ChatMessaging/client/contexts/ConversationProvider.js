@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import useLocaleStorage from '../../../hooks/useLocaleStorage';
 import { useContacts } from './ContactsProvider';
 
@@ -10,6 +10,7 @@ export function useConversations() {
 
 export function ConversationProvider({ children }) {
     const [conversations, setConversation] = useLocaleStorage('conversations', [])
+    const [selectConversationIndex, setSelectConversationIndex ] = useState(0);
     const { contacts } = useContacts();
 
     function createConverstation(recipients) {
@@ -18,7 +19,7 @@ export function ConversationProvider({ children }) {
         })
     }
 
-    const formatedConversations = conversations.map(con => {
+    const formatedConversations = conversations.map((con, index) => {
         const recipients = con.recipients.map(r => {
             const c = contacts.find(c => {
                 return c.id === r
@@ -26,12 +27,14 @@ export function ConversationProvider({ children }) {
             const name = (c && c.name) || r
             return { id: r, name }
         })
-
-        return{...conversations, recipients}
+const selected = index === selectConversationIndex 
+        return{...conversations, recipients, selected}
     })
 
 const value = {
     conversations: formatedConversations, 
+    selectedConversation: formatedConversations[selectConversationIndex], 
+    selectConversationIndex: setSelectConversationIndex, 
     createConverstation
 }
 
