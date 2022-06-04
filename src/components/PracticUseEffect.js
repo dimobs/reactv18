@@ -14,15 +14,16 @@ useEffect(() => {
     .then(response => response.json())
     .then(json => setItem(json))
    
-},[resourceType])
+},[windowWidth])
 
 useEffect(() => {
     window.addEventListener('resize', handleResize)
    
+    //първо ще се изпълни коубека, за да затрие всичко преди това
     return () => {
 window.removeEventListener('resize', handleResize)
     }
-},[])
+},[resourceType])
 
     return (
         <>

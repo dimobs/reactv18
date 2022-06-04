@@ -9,6 +9,7 @@ import DeferredView from './components/Deferred'
 import Messenger from './components/ChatMessaging/client'
 import CountTwo from "./components/Deferred/CountTwo";
 import PracticUseEffect from "./components/PracticUseEffect";
+import PracticUseContex from "./components/PracticUseContex";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/messenger" element={<Messenger />} />
           <Route path="/countTwo" element={<CountTwo />} />
           <Route path="/useEffect" element={<PracticUseEffect />} />
+          <Route path="/useContex" element={<PracticUseContex />} />
 
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />

@@ -20,6 +20,9 @@ const Home = () => {
  </li>   
  <li>
 <Link to="/useEffect" className="site-title">use Effect</Link>
+ </li> 
+ <li>
+<Link to="/useContex" className="site-title">use Contex</Link>
  </li>            
         </ul>
         </>
