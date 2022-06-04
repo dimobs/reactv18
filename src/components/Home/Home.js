@@ -17,6 +17,9 @@ const Home = () => {
             </li>
 <li>
 <Link to="/login" className="site-title">go to Login</Link>
+ </li>   
+ <li>
+<Link to="/useEffect" className="site-title">use Effect</Link>
  </li>            
         </ul>
         </>
