@@ -12,6 +12,7 @@ return (
 <li><Link to="/login" className="site-title">go to Login</Link></li>
 <li><Link to="/useEffect" className="site-title">use Effect</Link></li>
 <li><Link to="/useContex" className="site-title">use Contex</Link></li>
+<li><Link to="/useRef" className="site-title">use Ref</Link></li>
 </ul>
 </>
     )
