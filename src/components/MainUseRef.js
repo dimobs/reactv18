@@ -33,7 +33,7 @@ useEffect(() => {
         <input ref={startHere} />
             </div>
         <p>Your name is: {name} 
-        Here you can see previous letter: <h1>{inputRef.current}</h1></p>
+        Here you can see previous letter: <span>{inputRef.current}</span></p>
         </div>
         </>
     )
