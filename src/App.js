@@ -11,6 +11,7 @@ import CountTwo from "./components/Deferred/CountTwo";
 import PracticUseEffect from "./components/PracticUseEffect";
 import MainUseContex from "./components/PratcticUseContex";
 import MainUseRef from "./components/MainUseRef";
+import MainUseMemo from "./components/MainUseMemo";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/useEffect" element={<PracticUseEffect />} />
           <Route path="/useContex" element={<MainUseContex />} />
           <Route path="/useRef" element={<MainUseRef />} />
+          <Route path="/useMemo" element={<MainUseMemo />} />
 
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />
