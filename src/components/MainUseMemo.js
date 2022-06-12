@@ -6,10 +6,15 @@ function MainUseMemo() {
     const doubleNumber = useMemo(() => {
          return slowFn(number);
 }, [number])
-    const themeStyle = {
+    const themeStyle = useMemo(() =>{
+        return {count}
         backgroundColor: dark ? 'black' : 'white',
         color: dark ? 'white' : 'red'
-    }
+    })
+
+    useEffect(() => {
+        
+    })
 
     return (
         <>
