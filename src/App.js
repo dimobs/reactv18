@@ -12,6 +12,7 @@ import PracticUseEffect from "./components/PracticUseEffect";
 import MainUseContex from "./components/PratcticUseContex";
 import MainUseRef from "./components/MainUseRef";
 import MainUseMemo from "./components/MainUseMemo";
+import MainUseCallBack from "./components/MainCallback";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/useContex" element={<MainUseContex />} />
           <Route path="/useRef" element={<MainUseRef />} />
           <Route path="/useMemo" element={<MainUseMemo />} />
+          <Route path="/useCallback" element={<MainUseCallBack />} />
 
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />

@@ -7,14 +7,15 @@ function MainUseMemo() {
          return slowFn(number);
 }, [number])
     const themeStyle = useMemo(() =>{
-        return {count}
+        return {
         backgroundColor: dark ? 'black' : 'white',
         color: dark ? 'white' : 'red'
-    })
+}},[dark])
 
     useEffect(() => {
-        
-    })
+       console.log('Theme change'); 
+
+    },[themeStyle])
 
     return (
         <>
