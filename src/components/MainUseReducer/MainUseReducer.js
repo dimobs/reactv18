@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState, useRef, useEffect } from 'react';
 import Todo from './Todo';
 
 export const ACTIONS = {
@@ -30,8 +30,13 @@ function newTodo(name) {
 }
 
 export default function MainUseReducer() {
+    const startType = useRef();
     const [name, setName] = useState('')
     const [todos, dispatch] = useReducer(reducer, [])
+
+    useEffect(() => {
+        startType.current.focus();
+    },[])
 
     function handlerSubmit(e) {
         e.preventDefault();
@@ -46,7 +51,7 @@ export default function MainUseReducer() {
     return (
         <>
             <form onSubmit={handlerSubmit}>
-                <input type="text" value={name} onChange={e => setName(e.target.value)} />
+                <input ref={startType} type="text" value={name} onChange={e => setName(e.target.value)} />
             </form>
             {todos.map(todo => {
               return <Todo key={todo.id} todo={todo} dispatch={dispatch} />
