@@ -16,6 +16,7 @@ return (
 <li><Link to="/useMemo" className="site-title">use Memo</Link></li>
 <li><Link to="/useCallback" className="site-title">use CallBack</Link></li>
 <li><Link to="/useReducer" className="site-title">use Reducer</Link></li>
+<li><Link to="/useReducer2" className="site-title">use Reducer - 2</Link></li>
 </ol>
 </>
     )

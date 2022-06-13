@@ -14,6 +14,7 @@ import MainUseRef from "./components/MainUseRef";
 import MainUseMemo from "./components/MainUseMemo";
 import MainUseCallBack from "./components/MainCallback";
 import MainUseReducer from "./components/MainUseReducer";
+import MainUseReducer2 from "./components/MainUseReducer2";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/useMemo" element={<MainUseMemo />} />
           <Route path="/useCallback" element={<MainUseCallBack />} />
           <Route path="/useReducer" element={<MainUseReducer />} />
+          <Route path="/useReducer2" element={<MainUseReducer2 />} />
 
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />
