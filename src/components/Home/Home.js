@@ -17,6 +17,7 @@ return (
 <li><Link to="/useCallback" className="site-title">use CallBack</Link></li>
 <li><Link to="/useReducer" className="site-title">use Reducer</Link></li>
 <li><Link to="/useReducer2" className="site-title">use Reducer - 2</Link></li>
+<li><Link to="/useReducer3" className="site-title">use Reducer - 3</Link></li>
 <li><Link to="/useTransition" className="site-title">use Transition - 2</Link></li>
 </ol>
 </>
