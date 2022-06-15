@@ -19,6 +19,7 @@ return (
 <li><Link to="/useReducer2" className="site-title">use Reducer - 2</Link></li>
 <li><Link to="/useReducer3" className="site-title">use Reducer - 3</Link></li>
 <li><Link to="/useTransition" className="site-title">use Transition - 2</Link></li>
+<li><Link to="/useDeferredValue" className="site-title">use Deferred Value</Link></li>
 </ol>
 </>
     )
