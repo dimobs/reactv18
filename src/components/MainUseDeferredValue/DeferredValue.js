@@ -1,8 +1,14 @@
-import {useState} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import List from './List'
 
 function DeferredValueFn() {
   const [input, setInput] = useState('');
+  const startingPoint = useRef();
+
+useEffect(() => {
+  startingPoint.current.focus();
+  console.log('useefect');
+}, [])
 
 function handlerSubmit(e) {
   setInput(e.target.value);
@@ -12,7 +18,7 @@ function handlerSubmit(e) {
     <>
     Welcome!
     <div>
-    <input type='text' value={input} onChange={handlerSubmit} />
+    <input ref={startingPoint} type='text' value={input} onChange={handlerSubmit} />
     <List input={input} />
     </div>
     </>
