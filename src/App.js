@@ -18,6 +18,7 @@ import MainUseReducer2 from "./components/MainUseReducer2";
 import MainUseReducer3 from "./components/MainUseReducer3";
 import MainUseTransition from "./components/MainUseTransition";
 import MainUseDeferredValue from "./components/MainUseDeferredValue";
+import UseLayoutEffect from "./components/OptionalHooks/MainUseLayoutEffect/UseLayoutEffect";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/useReducer3" element={<MainUseReducer3 />} />
           <Route path="/useTransition" element={<MainUseTransition />} />
           <Route path="/useDeferredValue" element={<MainUseDeferredValue />} />
+          <Route path="/useLayout" element={<UseLayoutEffect />} />
 
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />
