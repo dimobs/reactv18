@@ -1,9 +1,21 @@
-import {useState} from 'react'
+import { useState, useEffect} from 'react'
 
-export default function useLocaleStorage(initialValue) {
-const [value, setValue] = useState(initialValue);
+function getSavedValue(key, initialValue) {
+    const saveValue = JSON.parse(localStorage.getItem(key))
+    if (saveValue) return saveValue;
+  
+    if (initialValue instanceof Function) return initialValue()
+    return initialValue;
+}
 
-return [value, setValue]
+export default function useLocaleStorage(key, initialValue) {
+    const [value, setValue] = useState(() => {
+return getSavedValue(key, initialValue)
+    });
 
+    useEffect(() => {
+        localStorage.setItem(key, JSON.stringify(value))
+    }, [value])
 
+    return [value, setValue]
 }
