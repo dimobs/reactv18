@@ -21,6 +21,9 @@ return (
 <li><Link to="/useTransition" className="site-title">use Transition - 2</Link></li>
 <li><Link to="/useDeferredValue" className="site-title">use Deferred Value</Link></li>
 <li><Link to="/useLayout" className="site-title">use layout effect</Link></li>
+<h2>Custom Hooks </h2>
+<li><Link to="/localeStorage" className="site-title">use LocaleStrorage custom Hook</Link></li>
+
 </ol>
 </>
     )
