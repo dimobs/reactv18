@@ -19,7 +19,7 @@ import MainUseReducer3 from "./components/MainUseReducer3";
 import MainUseTransition from "./components/MainUseTransition";
 import MainUseDeferredValue from "./components/MainUseDeferredValue";
 import UseLayoutEffect from "./components/OptionalHooks/MainUseLayoutEffect/UseLayoutEffect";
-import UseLocaleStorage from "./components/CustomHooks/UseLocaleStorage";
+import UseLocaleStorage from "./components/CustomHooks/LocaleStorage";
 
 function App() {
   return (

@@ -1,1 +1,1 @@
-export {default} from '../UseLocaleStorage';
+export {default} from './MainUseLocaleStorage';

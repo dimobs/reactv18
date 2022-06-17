@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
+import useLocaleStorage from './useLocaleStorage'
 
 export default function UseLocaleStorage() {
-const [name, setName] = useState('')
+const [name, setName] = useLocaleStorage('')
 
   return (
     <div>
