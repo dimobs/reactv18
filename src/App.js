@@ -23,6 +23,7 @@ import UseLocaleStorage from "./components/CustomHooks/localeStorage";
 import Toggle1 from "./components/CustomHooks/1-useToggle/Toggle1";
 import Timeout from "./components/CustomHooks/2-useTimeOut/TimeoutComponent";
 import DebounceComponent from "./components/CustomHooks/3-useDebounce/DebounceComponent";
+import UpdateEffectComponent from "./components/CustomHooks/4-useUpdateEffect/UpdateEffectComponent";
 
 function App() {
   return (
@@ -47,10 +48,12 @@ function App() {
           <Route path="/useTransition" element={<MainUseTransition />} />
           <Route path="/useDeferredValue" element={<MainUseDeferredValue />} />
           <Route path="/useLayout" element={<UseLayoutEffect />} />
+          {/* custum Hooks */}
           <Route path="/localeStorage" element={<UseLocaleStorage />} />
           <Route path="/toggle1" element={<Toggle1 />} />
           <Route path="/timeout" element={<Timeout />} />
           <Route path="/debounce" element={<DebounceComponent />} />
+          <Route path="/updateEffect" element={<UpdateEffectComponent />} />
           
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />

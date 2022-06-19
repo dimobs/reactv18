@@ -17,6 +17,7 @@ useUpdateLogger(name)
 <li><Link to="/toggle1" className="site-title">use Toggle</Link></li>
 <li><Link to="/timeout" className="site-title">use Timeout Fn</Link></li>
 <li><Link to="/debounce" className="site-title">use Debounce Fn</Link></li>
+<li><Link to="/updateEffect" className="site-title">use updateEffect Fn</Link></li>
 
 </ol>
     </div>
