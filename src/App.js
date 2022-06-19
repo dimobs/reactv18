@@ -24,6 +24,7 @@ import Toggle1 from "./components/CustomHooks/1-useToggle/Toggle1";
 import Timeout from "./components/CustomHooks/2-useTimeOut/TimeoutComponent";
 import DebounceComponent from "./components/CustomHooks/3-useDebounce/DebounceComponent";
 import UpdateEffectComponent from "./components/CustomHooks/4-useUpdateEffect/UpdateEffectComponent";
+import ArrayComponent from "./components/CustomHooks/5-useArray/ArrayComponent";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/timeout" element={<Timeout />} />
           <Route path="/debounce" element={<DebounceComponent />} />
           <Route path="/updateEffect" element={<UpdateEffectComponent />} />
+          <Route path="/useArray" element={<ArrayComponent />} />
           
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />

@@ -18,6 +18,7 @@ useUpdateLogger(name)
 <li><Link to="/timeout" className="site-title">use Timeout Fn</Link></li>
 <li><Link to="/debounce" className="site-title">use Debounce Fn</Link></li>
 <li><Link to="/updateEffect" className="site-title">use updateEffect Fn</Link></li>
+<li><Link to="/useArray" className="site-title">use Array Fn</Link></li>
 
 </ol>
     </div>
