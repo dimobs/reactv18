@@ -5,7 +5,7 @@ const callBackRef = useRef();
 const timeoutRef = useRef();
 
 useEffect(() => {
-    callBackRef.current = callback
+    callBackRef.current = callback //setCount(0)
 }, [callback]);
 
 const set = useCallback(() => {
