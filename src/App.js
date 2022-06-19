@@ -21,6 +21,7 @@ import MainUseDeferredValue from "./components/MainUseDeferredValue";
 import UseLayoutEffect from "./components/OptionalHooks/MainUseLayoutEffect/UseLayoutEffect";
 import UseLocaleStorage from "./components/CustomHooks/localeStorage";
 import Toggle1 from "./components/1-useToggle/Toggle1";
+import Timeout from "./components/CustomHooks/2-useTimeOut/TimeoutComponent";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/useLayout" element={<UseLayoutEffect />} />
           <Route path="/localeStorage" element={<UseLocaleStorage />} />
           <Route path="/toggle1" element={<Toggle1 />} />
+          <Route path="/timeout" element={<Timeout />} />
 
           <Route path="/myList" element={<MyList />} />
           <Route path="/login" element={<Login />} />
