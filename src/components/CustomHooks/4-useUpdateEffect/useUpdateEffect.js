@@ -1,13 +1,13 @@
 import { useEffect, useRef } from 'react';
 
-export default function useUpdateEffect(callback, [count]) {//alert(count), [count]=5
-    const firstRenderRef = useRef(false);
-console.log(firstRenderRef);
+export default function useUpdateEffect(callback, dependencies) {//alert(count), [count]=5
+    const firstRenderRef = useRef(true);
+
     useEffect(() => {
-           if (firstRenderRef.current) {
+        if (firstRenderRef.current) {
             firstRenderRef.current = false
             return
         }
         return callback()
-    }, [count])
+    }, dependencies)
 }
